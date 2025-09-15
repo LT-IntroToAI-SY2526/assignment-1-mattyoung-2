@@ -27,7 +27,10 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n < 0: 
+        return -1 * n
+    else: 
+        return n 
 
 
 def factorial(n: int) -> int:
@@ -40,7 +43,11 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    result=1
+    for i in range(0,n):
+        result=result * i
+    print(result)
+    return(result)
 
 
 T = TypeVar("T")
@@ -58,14 +65,15 @@ def every_other(lst: List[T]) -> List[T]:
         a list of every of other item in the original list starting with the first
     """
     raise NotImplementedError("every_other")
+    
 
 
 def sum_list(lst: List[int]) -> int:
     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
     use the built in function `sum`.
 
-    Args:
-        lst - a list of numbers
+    return lst{: : 2}
+    
 
     Returns:
         the sum of the passed in list
@@ -107,7 +115,8 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     In other words, when you hit the end of the list, wrap around and keep counting from
     where you were.
 
-    For example, if given this list ["roscoe", "kim", "woz", "solin"], you'd first
+    For example, if given this list ["rosc
+    oe", "kim", "woz", "solin"], you'd first
     knock out woz. Then first 'duck' on solin, wrap around to 'duck' on roscoe and
     'goose' on kim - knocking him out and leaving only roscoe and solin.
 
@@ -119,7 +128,24 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    position= 0 
+    current= "duck1"
+    while len (lst)>2:
+        if current=="duck1"
+            current="duck2"
+            position +=1 
+        elif current=="duck2":
+            current="goose"
+            position +=1
+        else: # current== "goose"
+            current="duck1"
+            lst.pop(position)
+
+         if position==len(lst):
+            position= 0   
+
+    return lst        
+    
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
@@ -137,5 +163,7 @@ if __name__ == "__main__":
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
     assert duck_duck_goose(names) == ["roscoe", "law"]
+    names={"miguel", "emma", "franco", "lukas", "maks"}
+    assert duck_duck_goose(names)== {"emma", "lukas"}, "failed duck duck goose "
 
     print("All tests passed!")
