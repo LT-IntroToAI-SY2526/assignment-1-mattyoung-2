@@ -43,12 +43,10 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    result=1
-    for i in range(0,n):
-        result=result * i
-    print(result)
-    return(result)
-
+    result = 1
+    for num in range(1, n+1):
+        result = result * num  # result *= num
+    return result
 
 T = TypeVar("T")
 
@@ -64,7 +62,9 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    
+
+    return lst[::2]
     
 
 
@@ -78,7 +78,12 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    
+    total = 0
+    for element in lst:
+        total += element
+    # print(total)
+    return total
 
 
 def mean(lst: List[int]) -> float:
@@ -90,7 +95,8 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    return sum_list(lst) / len(lst) if lst else 0
+
 
 
 def median(lst: List[int]) -> float:
@@ -105,7 +111,12 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    if len(lst) % 2 == 1:
+        return lst[len(lst) // 2 ]
+    else:
+        m1 = len(lst) // 2
+        m2 = m1 - 1
+        return (lst[m1] + lst[m2]) / 2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -131,7 +142,7 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     position= 0 
     current= "duck1"
     while len (lst)>2:
-        if current=="duck1"
+        if current=="duck1":
             current="duck2"
             position +=1 
         elif current=="duck2":
@@ -141,7 +152,7 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
             current="duck1"
             lst.pop(position)
 
-         if position==len(lst):
+        if position==len(lst):
             position= 0   
 
     return lst        

@@ -17,9 +17,13 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 After completing your problems, reflect on:
 
 1. **What was your initial experience with Python?** How did it compare to other programming languages you've used?
+My initial expereicne with python was that it was pretty challenging and kind of hard to get used to. It is definetely much more complex then codehs. 
 
 2. **How did you use AI effectively?** Give specific examples of good prompts you used and what you learned from the responses.
+I used it affectively to give me questions for me to work out the solutions. A good prompt was to decide which 3 numbers were larger and I learned how to deal with those types of problems. 
 
 3. **What concepts were most challenging?** How did AI help you understand them?
+The concepts that were the most challenging was learning the duck duck goose code, AI helped me with that. 
 
 4. **What did you learn about collaborating with AI?** What strategies worked best for learning rather than just getting answers?
+I learned that the best thing for AI is to ask very specific questions and and ask around the solutions to get the most for your learning experience. 
